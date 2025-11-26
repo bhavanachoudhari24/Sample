@@ -12,7 +12,7 @@ pipeline{
             steps{
             echo "code checkout"
             git url:"https://github.com/bhavanachoudhari24/Sample.git", branch:"main"
-            echo "code checkout successful-first"
+            echo "code checkout successful"
         }}
         stage ("build"){
             steps{
