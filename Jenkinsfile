@@ -3,15 +3,9 @@ pipeline{
     agent any
     stages{
         stage("checkout"){
-        steps {
-            withCredentials([string(credentialsId: 'jenkinsPAT', variable: 'jenkinsPAT')]) {
-                sh 'echo $TOKEN'
-            }
-}
-        stage("checkout"){
             steps{
             echo "code checkout"
-            git url:"https://github.com/bhavanachoudhari24/Sample.git", branch:"main"
+            checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'bhavanachoudhari24', url: 'https://github.com/bhavanachoudhari24/Sample.git']])
             echo "code checkout successful-1"
         }}
         stage ("build"){
