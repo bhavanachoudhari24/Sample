@@ -12,7 +12,7 @@ pipeline{
             steps{
               echo "code build"
         }}
-        stage("upload to docker hub"){
+        stage("upload to docker hub1"){
             steps{
               echo "image upload"
         }}
