@@ -6,7 +6,7 @@ pipeline{
             steps{
             echo "code checkout"
             checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'bhavanachoudhari24', url: 'https://github.com/bhavanachoudhari24/Sample.git']])
-            echo "code checkout successful-1"
+            echo "code checkout successful-11"
         }}
         stage ("build"){
             steps{
