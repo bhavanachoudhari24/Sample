@@ -5,7 +5,7 @@ pipeline{
         stage("checkout"){
             steps{
             echo "code checkout"
-            git url:"https://github.com/bhavanachoudhari24/django-notes-app.git", branch:"main"
+            git url:"https://github.com/bhavanachoudhari24/Sample.git", branch:"main"
             echo "code checkout successful"
         }}
         stage ("build"){
